@@ -1,0 +1,61 @@
+{
+	"$baseURI": "https://yal.cc/r/20/pixelfont/",
+	"$version": "1.0",
+	"in-glyphs": [
+		".,:;=-+'\"><()[]*",
+		"/~_!? 0123456789",
+		"ABCDEFGHIJKLMNOP",
+		"QRSTUVWXYZabcdef",
+		"ghijklmnopqrstuv",
+		"wxyz"
+	],
+	"glyph-color": "auto",
+	"glyph-width": 11,
+	"glyph-height": 12,
+	"glyph-ofs-x": 1,
+	"glyph-ofs-y": 1,
+	"glyph-sep-x": 1,
+	"glyph-sep-y": 1,
+	"glyph-base-x": 0,
+	"glyph-baseline": 11,
+	"glyph-spacing": 1,
+	"font-is-mono": false,
+	"font-em-square": 1536,
+	"font-line-gap": 256,
+	"font-ascend": 1280,
+	"font-descend": -256,
+	"font-px-size": 128,
+	"contour-type": "pixel",
+	"font-type": "ttf",
+	"font-is-upper": false,
+	"font-name": "SlightlyItalicMedievalFantasyFont",
+	"font-author": "Not Important",
+	"font-copy": "(c)",
+	"font-version-major": 0.1,
+	"font-version-minor": 0,
+	"font-desc": "",
+	"font-license": "You have permission to do anything.",
+	"font-license-url": "",
+	"font-sample-text": [
+		"Hello!"
+	],
+	"font-embedding": "4",
+	"font-weight-class": "400",
+	"font-width-class": "5",
+	"font-creation-date": "2025-07-13",
+	"font-creation-time": "18:23",
+	"font-modification-date": "2025-08-01",
+	"font-modification-time": "10:26",
+	"font-modification-auto": true,
+	"overrides": [
+		"# hide the pixels of the \"space\" characters!",
+		"# (but they'll still have a width)",
+		"hide \\s",
+		""
+	],
+	"font-preview-text": [
+		"THE QUICK BROWN FOX JUMPS OVER A LAZY DOG.",
+		"the quick brown fox jumps over a lazy dog.",
+		"0123456789"
+	]
+}

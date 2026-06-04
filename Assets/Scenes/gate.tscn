@@ -1,0 +1,126 @@
+[gd_scene format=3 uid="uid://c6jbhkwoaxthj"]
+
+[ext_resource type="Texture2D" uid="uid://cjfs2ypiuq8oy" path="res://Assets/Sprites/Castle/DarkCastleTileset/$EvilGate_300%.png" id="1_5fdge"]
+[ext_resource type="Script" uid="uid://cxj3b0x8gms0e" path="res://Assets/Scripts/gate.gd" id="2_gate_script"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1rl8o"]
+atlas = ExtResource("1_5fdge")
+region = Rect2(0, 0, 144, 144)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lgf1s"]
+atlas = ExtResource("1_5fdge")
+region = Rect2(0, 0, 144, 144)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0e7rs"]
+atlas = ExtResource("1_5fdge")
+region = Rect2(144, 0, 144, 144)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_trrs3"]
+atlas = ExtResource("1_5fdge")
+region = Rect2(288, 0, 144, 144)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kkvxu"]
+atlas = ExtResource("1_5fdge")
+region = Rect2(0, 144, 144, 144)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cdqk7"]
+atlas = ExtResource("1_5fdge")
+region = Rect2(144, 144, 144, 144)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0dfmk"]
+atlas = ExtResource("1_5fdge")
+region = Rect2(288, 144, 144, 144)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x6i8x"]
+atlas = ExtResource("1_5fdge")
+region = Rect2(0, 288, 144, 144)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_soqde"]
+atlas = ExtResource("1_5fdge")
+region = Rect2(144, 288, 144, 144)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d63bt"]
+atlas = ExtResource("1_5fdge")
+region = Rect2(288, 288, 144, 144)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gei0d"]
+atlas = ExtResource("1_5fdge")
+region = Rect2(0, 432, 144, 144)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nb86a"]
+atlas = ExtResource("1_5fdge")
+region = Rect2(144, 432, 144, 144)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mnj8p"]
+atlas = ExtResource("1_5fdge")
+region = Rect2(288, 432, 144, 144)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vicy7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1rl8o")
+}],
+"loop": true,
+"name": &"closed",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lgf1s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0e7rs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_trrs3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kkvxu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cdqk7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0dfmk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x6i8x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_soqde")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d63bt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gei0d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nb86a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mnj8p")
+}],
+"loop": true,
+"name": &"gate open",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gate"]
+size = Vector2(80, 120)
+
+[node name="Gate" type="Node2D" unique_id=342657342]
+script = ExtResource("2_gate_script")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=840428792]
+sprite_frames = SubResource("SpriteFrames_vicy7")
+animation = &"gate open"
+autoplay = "closed"
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1613483305]
+position = Vector2(0, -10)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=30673476]
+position = Vector2(0, 22)
+shape = SubResource("RectangleShape2D_gate")
