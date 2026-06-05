@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://xtbfpg6o2ymq"
+path="res://.godot/imported/Human Lompat.wav-a426a0e9a3f1ff2adbb47d6e1b733f2a.sample"
+
+[deps]
+
+source_file="res://Assets/sound/Human Lompat.wav"
+dest_files=["res://.godot/imported/Human Lompat.wav-a426a0e9a3f1ff2adbb47d6e1b733f2a.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

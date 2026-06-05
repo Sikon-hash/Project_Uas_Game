@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://rwe5ah6kdyj6"
+path="res://.godot/imported/paper main_menu.wav-b4274c15eb07ddd2207cb66b26ff8de3.sample"
+
+[deps]
+
+source_file="res://Assets/sound/paper main_menu.wav"
+dest_files=["res://.godot/imported/paper main_menu.wav-b4274c15eb07ddd2207cb66b26ff8de3.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
