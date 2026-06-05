@@ -7,6 +7,7 @@
 [ext_resource type="Script" uid="uid://ddthugcnl6q4k" path="res://Assets/Scripts/game.gd" id="4_game_script"]
 [ext_resource type="PackedScene" uid="uid://n0421htivdlj" path="res://Assets/Scenes/healtbar.tscn" id="5_healtbar_scene"]
 [ext_resource type="PackedScene" uid="uid://c6jbhkwoaxthj" path="res://Assets/Scenes/gate.tscn" id="6_iusbg"]
+[ext_resource type="PackedScene" uid="uid://chwfmcwgdeu5r" path="res://Assets/Scenes/try_again.tscn" id="7_try_again"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pfbgl"]
 texture = ExtResource("2_pb48a")
@@ -399,12 +400,8 @@ offset_top = 16.0
 offset_right = 456.0
 offset_bottom = 108.0
 
-[node name="TryAgainButton" type="Button" parent="CanvasLayer" unique_id=772272032]
-offset_left = 540.0
-offset_top = 300.0
-offset_right = 740.0
-offset_bottom = 360.0
-text = "TRY AGAIN"
+[node name="TryAgain" parent="CanvasLayer" unique_id=723144124 instance=ExtResource("7_try_again")]
+visible = false
 
 [node name="Gate" parent="." unique_id=342657342 instance=ExtResource("6_iusbg")]
 position = Vector2(-1291, -217)

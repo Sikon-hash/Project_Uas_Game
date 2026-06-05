@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 const CHASE_SPEED = 60.0      # Kecepatan mengejar
 const ATTACK_DISTANCE = 5.0   # Jarak sentuh untuk menyerang (piksel)
-const ATTACK_COOLDOWN = 1.8    # Jeda antar serangan (detik)
+const ATTACK_COOLDOWN = 1.0    # Jeda antar serangan (detik)
 const MAX_HEALTH = 30
 
 var target_player: Node2D = null

@@ -16,6 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://cyfsuw18ac0dp" path="res://Assets/Sprites/Castle/DarkCastleTileset/CastleWallsInner.png" id="12_6gr1l"]
 [ext_resource type="PackedScene" uid="uid://b6v8x43wcf8kt" path="res://Assets/Scenes/enemy.tscn" id="14_7520d"]
 [ext_resource type="PackedScene" uid="uid://n0421htivdlj" path="res://Assets/Scenes/healtbar.tscn" id="15_8ohse"]
+[ext_resource type="PackedScene" uid="uid://chwfmcwgdeu5r" path="res://Assets/Scenes/try_again.tscn" id="16_try_again"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nhuiu"]
 texture = ExtResource("1_fpksy")
@@ -758,9 +759,5 @@ offset_top = 16.0
 offset_right = 236.0
 offset_bottom = 86.0
 
-[node name="TryAgainButton" type="Button" parent="CanvasLayer" unique_id=231820275]
-offset_left = 540.0
-offset_top = 300.0
-offset_right = 740.0
-offset_bottom = 360.0
-text = "TRY AGAIN"
+[node name="TryAgain" parent="CanvasLayer" unique_id=1496387005 instance=ExtResource("16_try_again")]
+visible = false

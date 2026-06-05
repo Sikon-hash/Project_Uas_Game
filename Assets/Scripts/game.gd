@@ -1,12 +1,11 @@
 extends Node2D
 
 @onready var character: Node = $TileMap/Character
-@onready var try_again_button: Button = $CanvasLayer/TryAgainButton
+@onready var try_again: CanvasLayer = $CanvasLayer/TryAgain
 @onready var healtbar: Control = $CanvasLayer/Healtbar
 
 func _ready() -> void:
-	try_again_button.visible = false
-	try_again_button.pressed.connect(_on_try_again_pressed)
+	try_again.restart_pressed.connect(_on_try_again_pressed)
 
 	if character and character.has_signal("died"):
 		character.died.connect(_on_player_died)
@@ -15,7 +14,7 @@ func _ready() -> void:
 		_on_player_health_changed(character.health, character.max_health)
 
 func _on_player_died() -> void:
-	try_again_button.visible = true
+	try_again.visible = true
 
 func _on_try_again_pressed() -> void:
 	get_tree().reload_current_scene()

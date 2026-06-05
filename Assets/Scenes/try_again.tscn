@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://chwfmcwgdeu5r"]
+
+[ext_resource type="Texture2D" uid="uid://c2m5btemqqddq" path="res://Assets/Sprites/Main Menu/TryAgain.png" id="1_vqp8m"]
+[ext_resource type="Script" path="res://Assets/Scripts/try_again.gd" id="2_script"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b1pe3"]
+atlas = ExtResource("1_vqp8m")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4ut6t"]
+atlas = ExtResource("1_vqp8m")
+region = Rect2(0, 128, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k1dja"]
+atlas = ExtResource("1_vqp8m")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qeut5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b1pe3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4ut6t")
+}],
+"loop": false,
+"name": &"activated",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k1dja")
+}],
+"loop": false,
+"name": &"idle",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vqp8m"]
+size = Vector2(55, 23)
+
+[node name="Try Again" type="CanvasLayer" unique_id=1129147425]
+script = ExtResource("2_script")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1028997473]
+offset_right = 1153.0
+offset_bottom = 649.0
+mouse_filter = 2
+color = Color(0.1, 0.1, 0.1, 0.67058825)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=115760910]
+position = Vector2(561, 327)
+scale = Vector2(4, 4)
+sprite_frames = SubResource("SpriteFrames_qeut5")
+animation = &"activated"
+autoplay = "idle"
+
+[node name="Area2D" type="Area2D" parent="AnimatedSprite2D" unique_id=11164723]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D/Area2D" unique_id=729429715]
+position = Vector2(2, -1.75)
+shape = SubResource("RectangleShape2D_vqp8m")
